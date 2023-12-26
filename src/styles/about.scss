@@ -1,0 +1,112 @@
+.marquee{
+  display: flex;
+  position: relative;
+  margin: auto;
+  /* background-color: #D34444; */
+  overflow: hidden;
+  z-index: 1;
+}
+.marquee > span {
+  margin-top: 4rem;
+  display: flex;
+  line-height: 0.8;
+  padding-bottom: 20px;
+  animation: scrollText 6s infinite linear;
+}
+
+.marquee > span::after {
+  content: '-About me-About me-About me';
+}
+
+
+.marquee > span:hover {
+  animation-play-state: paused;
+}
+
+.social-link > span{
+  font-size: 25px;
+  margin-right: 22px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.social-link > span::after{
+  content: '';
+  width: 0%;
+  height: 0.5px;
+  margin-bottom: -5px;
+  background-color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+}
+
+.wrapper{
+  font-family: 'Afacad', sans-serif;
+}
+
+.social-link > span:hover::after{
+  width: 100%;
+}
+
+.aboutpage-hover > div{
+  transition: all 0.3s ease-in-out;
+}
+
+
+.aboutpage-hover > div > .about {
+  transition: all 0.5s ease-in-out;
+}
+
+.aboutpage-hover:hover > div > .about {
+  transform: translateY(-30px);
+}
+
+.aboutpage-hover > div > .about-hover {
+  transition: all 0.5s ease-in-out;
+}
+
+.aboutpage-hover:hover > div > .about-hover {
+  transform: translateY(-32px);
+}
+
+.aboutpage-hover > div > div > p > .icon-link{
+  transform: rotate(-45deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.aboutpage-hover > div > div > p > .icon-link-hover{
+  transform: translate3d(-30px, 15px, 35px) rotate(-45deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.aboutpage-hover:hover > div > div > p > .icon-link{
+  transform: translate3d(30px, -35px, -85px) rotate(-45deg);
+  
+}
+
+.aboutpage-hover:hover > div > div > p > .icon-link-hover{
+  transform: translate3d(0px, -20px, 0px) rotate(-45deg);
+
+}
+
+
+.floating {  
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+
+@keyframes scrollText {
+from   { transform: translateX(0%); }
+to { transform: translateX(-50%); }
+}
+
+@keyframes floating {
+  0% { transform: translate(0,  0px); }
+  50%  { transform: translate(0, 15px); }
+  100%   { transform: translate(0, -0px); }    
+}

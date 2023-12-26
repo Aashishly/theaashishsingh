@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad:wght@400;500;600;700&display=swap');
+
+@font-face {
+    font-family: "Druk";
+    src: url('./assets/DrukFamily/Druk-Bold-Trial.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Thin-Druk';
+    src: url('./assets/DrukFamily/DrukText-Medium-Trial.otf') format('truetype');
+}
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* cursor: none; */
+    scroll-behavior: smooth;
+    list-style: none;
+    scroll-snap-type: y mandatory;
+}
+
+::selection{
+    color: #FFB534;
+}
