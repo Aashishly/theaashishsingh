@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import resume from '../assets/AashishResume.pdf'
 
 
 const Menu = ({show}) => {
@@ -10,7 +11,7 @@ const Menu = ({show}) => {
                 <li><Link to='/building' className='hover:text-white transition-all ease-in-out'>About</Link></li>
                 <li><Link to='/building' className='hover:text-white transition-all ease-in-out'>Project</Link></li>
                 <li><Link to='/building' className='hover:text-white transition-all ease-in-out'>Blog</Link></li>
-                <li><Link to='/building' className='hover:text-white transition-all ease-in-out'>Download Resume</Link></li>
+                <li><Link to={resume} target="_blank" download='resume' rel="noreferrer" className='hover:text-white transition-all ease-in-out'>Download Resume</Link></li>
                 <li><Link to='/building' className='hover:text-white transition-all ease-in-out'>Contact</Link></li>
               </ul>
             </div>
